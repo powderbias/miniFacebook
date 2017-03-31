@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script>
+
+
+	function getElement1(){
+		var eingabe1 =document.getElementById("eingabe1").value;
+		return eingabe1;
+	}
+	
+	function getElement2(){
+		
+		var eingabe2 =document.getElementById("eingabe2").value;
+		return eingabe2;
+	}
+	function getOperator(){
+		
+		
+		
+		
+		
+	}
+	function plus(){
+		
+		var eingabe1 =document.getElementById("eingabe1").value;
+		var eingabe2 =document.getElementById("eingabe2").value;
+		
+		var ergebnis = eingabe1+eingabe2;
+		document.getElementById("ergebnis").innerHTML = ergebnis;
+	}
+	
+	function rechne(operator){
+		var ergebnis;
+		console.log("Der Operator ist " + operator);	
+		
+		if(operator == "plus"){
+			 ergebnis=Number(getElement1())+Number(getElement2());
+		}
+		else if(operator == "minus"){
+			 ergebnis=Number(getElement1())-Number(getElement2());
+		}
+		else if(operator == "geteilt"){
+			 ergebnis=Number(getElement1())/Number(getElement2());
+		}
+		else if(operator == "mal"){
+			 ergebnis=Number(getElement1())*Number(getElement2());
+		}
+		
+		document.getElementById("ergebnis").innerHTML = ergebnis;
+		
+		
+	}
+		
+		
+		
+</script>
+</head>
+<body>
+
+<input type="button" onclick="rechne('plus')" value="plus")/>
+<input type="button" onclick="rechne('minus')" value="minus")/>
+<input type="button" onclick="rechne('geteilt')" value="geteilt")/>
+<input type="button" onclick="rechne('mal')" value="mal")/>
+
+<p><input type="text" id="eingabe1"></p>
+<p><input type="text" id="eingabe2"></p>
+<p id="ergebnis">Ergebnis</p>
+
+
+
+
+
+
+
+
+</body>
+</html>
